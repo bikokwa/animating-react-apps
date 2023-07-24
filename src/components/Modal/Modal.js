@@ -5,7 +5,12 @@ import "./Modal.css";
 
 const modal = (props) => {
   return (
-    <Transition in={props.show} timeout={300} mountOnEnter unmountOnExit>
+    <Transition
+      in={props.show}
+      timeout={{ enter: 400, exit: 1000 }}
+      mountOnEnter
+      unmountOnExit
+    >
       {(state) => {
         const cssClasses = [
           "Modal",
