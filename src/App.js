@@ -37,6 +37,22 @@ class App extends Component {
           timeout={300}
           mountOnEnter
           unmountOnExit
+          onEnter={() => console.log("before entering status is applied")}
+          onEntering={() =>
+            console.log("fired after entering state is applied")
+          }
+          onEntered={() =>
+            console.log("fired after the entered state is applied")
+          }
+          onExit={() =>
+            console.log("fired before the exiting state is applied")
+          }
+          onExiting={() =>
+            console.log("fired after the exiting state is applied")
+          }
+          onExited={() =>
+            console.log("fired after the exited state is applied")
+          }
         >
           {(state) => (
             <div
